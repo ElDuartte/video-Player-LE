@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<title>Video Player</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="player">
+				<button
+					class="button"
+					id="backward"
+					aria-label="Retorceder 10 segundos"
+					title="Retroceder 10 segundos"
+				></button>
+				<button
+					class="button"
+					id="play"
+					aria-label="Play"
+					title="Play"
+				></button>
+				<button
+					class="button"
+					hidden
+					id="pause"
+					aria-label="Pausa"
+					title="Pausa"
+				></button>
+				<button
+					class="button"
+					id="forward"
+					aria-label="Adelantar 10 segundos"
+					title="Adelantar 10 segundos"
+				></button>
+				<video
+					id="video"
+					controls
+					muted
+					poster="./images/poster.jpg"
+					src="./videos/lofi.mp4"
+					width="400px"
+				></video>
+			</div>
+		</div>
+
+		<script src="./js/index.js"></script>
+	</body>
+</html>
