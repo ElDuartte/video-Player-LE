@@ -34,4 +34,23 @@ function handleForward() {
 	console.log("para delante");
 }
 
-//------------------------------ CLASE 7 para la 8
+const progress = document.querySelector("#progress");
+video.addEventListener("loadedmetadata", handleLoaded);
+video.addEventListener("timeupdate", handleTimeUpdate);
+
+function handleLoaded() {
+	progress.max = video.duration;
+	console.log("cargo", video.duration);
+}
+
+function handleTimeUpdate() {
+	progress.value = video.currentTime;
+	// console.log("tiempo actual", video.currentTime);
+}
+
+progress.addEventListener("input", handleInput);
+
+function handleInput() {
+	video.currentTime = progress.value;
+	console.log(progress.value);
+}
